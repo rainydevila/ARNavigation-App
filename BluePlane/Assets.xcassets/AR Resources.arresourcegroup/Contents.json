@@ -1,0 +1,62 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "BackPoint.arreferenceimage"
+    },
+    {
+      "filename" : "BLACKBLACK.arreferenceimage"
+    },
+    {
+      "filename" : "Boken2.arreferenceimage"
+    },
+    {
+      "filename" : "FujimotoLab.arreferenceimage"
+    },
+    {
+      "filename" : "jiji.arreferenceimage"
+    },
+    {
+      "filename" : "KatunoLab.arreferenceimage"
+    },
+    {
+      "filename" : "KatunoLab2.arreferenceimage"
+    },
+    {
+      "filename" : "OtukaLab.arreferenceimage"
+    },
+    {
+      "filename" : "OtukaLab2.arreferenceimage"
+    },
+    {
+      "filename" : "swiftbook.arreferenceimage"
+    },
+    {
+      "filename" : "TokudaLab.arreferenceimage"
+    },
+    {
+      "filename" : "TokudaLab2.arreferenceimage"
+    },
+    {
+      "filename" : "TokudaLabfront.arreferenceimage"
+    },
+    {
+      "filename" : "TukijiLab.arreferenceimage"
+    },
+    {
+      "filename" : "TukijiLab2.arreferenceimage"
+    },
+    {
+      "filename" : "UchikawaLab.arreferenceimage"
+    },
+    {
+      "filename" : "UchikawaLab2.arreferenceimage"
+    },
+    {
+      "filename" : "Watches.arreferenceimage"
+    }
+  ]
+}
