@@ -1,11 +1,11 @@
 //
-//  TokudaLab.swift
+//  ViewController.swift
 //  BluePlane
 //
-//  Created by 原田龍青 on 2019/12/26.
+//  Created by 原田龍青 on 2019/11/20.
 //  Copyright © 2019 原田龍青. All rights reserved.
 //
-
+/*
 import UIKit
 import RealityKit
 import SceneKit
@@ -13,12 +13,22 @@ import ARKit
 import AVFoundation
 import CoreBluetooth
 
-class TokudaLab: UIViewController {
+class ViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer!
     
     //シーンビューとOutlet接続
-    @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet var sceneView: ARSCNView!
+    //@IBAction func TapAction(_ sender: Any) {}
+    
+    /*
+    //tage
+    var targetNode : SCNNode!
+    var n = 0
+    var screenCenter: CGPoint {
+        let bounds = sceneView.bounds
+        return CGPoint(x: bounds.midX, y: bounds.midY)}
+    */
     
     //矢印Nodeを追加
     lazy var yajirusiNode: SCNNode = {
@@ -67,10 +77,19 @@ class TokudaLab: UIViewController {
         
         // Set the view's delegate
         sceneView.delegate = self
-
+   //     let scene = SCNScene()
+   //     sceneView.scene = scene
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-
+        
+       // let scene = SCNScene(named:"art.scnassets/yajirusi.scn")!
+        
+             //   sceneView.scene = scene
+        /*/タップを検知する設定
+        // add a tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        sceneView.addGestureRecognizer(tapGesture)
+        */
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,6 +108,9 @@ class TokudaLab: UIViewController {
         sceneView.session.run(configuration)
 
     }
+    @IBAction func tapSceneView(_ sender: UITapGestureRecognizer) {
+        //タップしたARの座標let tapLoc = sender.location(in: sceneView)
+    }
 
         //ビュー非表示時に呼ばれる
         override func viewWillDisappear(_ animated: Bool) {
@@ -98,7 +120,7 @@ class TokudaLab: UIViewController {
         }
     }
 
-extension TokudaLab: AVAudioPlayerDelegate {
+extension ViewController: AVAudioPlayerDelegate {
     func playSound(name: String) {
         guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
             print("音源ファイルが見つかりません")
@@ -115,7 +137,7 @@ extension TokudaLab: AVAudioPlayerDelegate {
     }
 }
 
-    extension TokudaLab: ARSCNViewDelegate {
+    extension ViewController: ARSCNViewDelegate {
         
         func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval){
             guard let lightEstimate = self.sceneView.session.currentFrame?.lightEstimate else { return }
@@ -212,23 +234,19 @@ extension TokudaLab: AVAudioPlayerDelegate {
                 node.addChildNode(textNode)
                 print("anchor is added")
             }
-            if (anchor.name == "UchikawaLab")||(anchor.name == "UchikawaLab2") {
+  /*          if (anchor.name == "UchikawaLab")||(anchor.name == "UchikawaLab2") {
                 let textNode = TextNode(text: "内川研")
                 node.addChildNode(textNode)
                 print("anchor is added")
             }
-            if (anchor.name == "UchikawaLab")||(anchor.name == "KanouLab") {
-                let textNode = TextNode(text: "狩野研")
-                node.addChildNode(textNode)
-                print("anchor is added")
-            }
-
+ */
+            /*
             if (anchor.name == "TukijiLab")||(anchor.name == "TukijiLab2") {
                 let textNode = TextNode(text: "築地研")
                 node.addChildNode(textNode)
                 print("anchor is added")
             }
-            
+ */
             if anchor.name == "BackPoint" {
                 let textNode = TextNode(text: "引き返せ")
                 node.addChildNode(textNode)
@@ -239,3 +257,17 @@ extension TokudaLab: AVAudioPlayerDelegate {
             }
         }
     }
+    /*
+        //シーンを作る
+        let modelNode = SCNNode()
+        let scene = SCNScene(named: "art.scnassets/IronMan/IronMan.scn")!
+        modelNode.scale = SCNVector3(0.1, 0.1, 0.1)
+        //シーンビューにシーンを設定する
+        sceneView.scene = scene
+        
+     /*   //シーンに追加
+        sceneView.scene.rootNode.addCholdNode(~Node)*/
+    
+    }
+*/
+*/

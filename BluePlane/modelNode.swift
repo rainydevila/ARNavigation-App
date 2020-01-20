@@ -6,9 +6,11 @@
 //  Copyright © 2019 原田龍青. All rights reserved.
 //
 
-import SwiftUI
-
-struct modelNode: View {
+import SceneKit
+import ARKit
+import UIKit
+/*
+class modelNode: SCNNode {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -19,3 +21,4 @@ struct modelNode_Previews: PreviewProvider {
         modelNode()
     }
 }
+*/

@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2019-11-15T04:37:12Z</created>
-  <modified>2019-11-15T04:37:12Z</modified>
+  <created>2019-11-21T05:17:52Z</created>
+  <modified>2019-11-21T05:17:52Z</modified>
   <unit meter="0.025400"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -174,7 +174,7 @@
  </library_geometries>
  <library_visual_scenes>
   <visual_scene id="scene11">
-   <node id="Dummy001" name="Dummy001">
+   <node id="Dummy001" name="01">
     <matrix>0.962463 0 0 0 0 0 0.178146 0 0 -0.063173 0 0 0 0 0 1 </matrix>
     <node id="Object002" name="Object002">
      <matrix>1.039001 0 0 -0.765282 0 15.82953 0 -0.049157 0 0 5.613384 5.670288 0 0 0 1 </matrix>
